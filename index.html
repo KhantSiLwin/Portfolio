@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c19ff">
+    <title>Noel | Fullstack Dev</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Noel | Full Stack Dev" />
+    <meta name="keywords" content="noel,noel khantsiwlin,Noel Khant,web developer,web design,template,reflection,noel khant,noelkhant" />
+    <meta name="author" content="Noel" />
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="Noel | Full stack DEV" />
+    <meta property="og:image" content="site-ss.png" />
+    <meta property="og:url" content="http://noel.netlify.app/" />
+    <meta property="og:site_name" content="Noel | Full Stack Dev" />
+    <meta property="og:description" content="Portfolio Website" />
+    <link rel="icon" href="img/coder.png" type="image/png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/splide-skyblue.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/img/coder.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+    <div id="loader">
+        <div class="progress-6"></div>
+    </div>
+    <style>
+        #loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000e3;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            z-index: 2000;
+        }
+        
+        .progress-6 {
+            width: 120px;
+            height: 22px;
+            border-radius: 20px;
+            color: #6c19ff;
+            border: 2px solid;
+            position: relative;
+        }
+        
+        .progress-6::before {
+            content: "";
+            position: absolute;
+            margin: 2px;
+            inset: 0 100% 0 0;
+            border-radius: inherit;
+            background: currentColor;
+            animation: p6 1.5s infinite;
+        }
+        
+        @keyframes p6 {
+            100% {
+                inset: 0
+            }
+        }
+    </style>
+</head>
+
+<body onload="document.getElementById('loader').style.display='none'; new WOW().init();" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <nav class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center py-3">
+                        <div class="d-flex justify-content-between align-items-center px-2">
+                            <img src="img/coder.png" style="width: 30px; height: 30px;" alt="">
+                            <h2 class="text-white mb-0 ps-2 logo-name">NOEL</h2>
+                        </div>
+                        <div class="nav-menu-open">
+                            <i class="feather-align-right text-white px-2" style="font-size: 30px;cursor:pointer;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-menu-wrap" onclick="closenav()"></div>
+    <div class="nav-menu">
+
+        <div class="nav-menu-close" onclick="closenav()">
+            <i class="feather-chevrons-right"></i>
+        </div>
+
+        <ul class="">
+            <li class="p-1 nav-item mb-2 text-white"><a onclick="closenav()" href="#home" class="text-white nav-link active">Home</a></li>
+            <li class="p-1 nav-item mb-2 text-white"><a onclick="closenav()" href="#about-me" class="text-white nav-link">About Me</a></li>
+            <li class="p-1 nav-item mb-2 text-white"><a onclick="closenav()" href="#services" class="text-white nav-link">Services</a></li>
+            <li class="p-1 nav-item mb-2 text-white"><a onclick="closenav()" href="#skills" class="text-white nav-link">Skills</a></li>
+            <li class="p-1 nav-item mb-2 text-white"><a onclick="closenav()" href="#my-projects" class="text-white nav-link">Projects</a></li>
+            <li class="p-1 nav-item mb-2 text-white"><a onclick="closenav()" href="#contact-me" class="text-white nav-link">Contact Me</a></li>
+        </ul>
+
+    </div>
+
+
+    <section id="home" class="container-fluid p-0">
+        <div class="home">
+            <div class="row">
+                <div class="col-12">
+                    <div class="home-wrap">
+
+                        <div class="profile">
+                            <img src="img/me.jpeg" class="wow fadeInDown profile-img" alt="">
+
+                            <div class="profile-text mt-3">
+                                <p class="text-white mb-0 head-text-intro mb-2 wow fadeInDown ani-delay3">Hi ! I'm </p>
+                                <h1 id="head-text"></h1>
+                            </div>
+                        </div>
+
+
+                        <div class="wow fadeInDown ani-delay3 mouse-wrap">
+                            <a href="#about-me" class="mouse  wow bounce shadow-lg ani-delay5" data-wow-iteration="infinite" data-wow-duration="2s">
+                                <i class="feather-chevrons-down"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid py-5 about-me" id="about-me">
+
+        <div class="row py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="text-white textborder wow fadeInDown">About <span class="theme-color"> Me</span></h3>
+                    </div>
+
+                    <div class="col-12 col-md-6 text-center mt-4">
+                        <img src="img/undraw_feeling_proud_qne1.svg" class="wow slideInLeft" style="width: 250px; height: 250px;" alt="">
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-4 d-flex justify-content-center align-items-center">
+                        <div class="about-head-text pb-5">
+                            <h5 class="text-white">Hello , I'm Noel </h5>
+                            <p class="text-white mt-3"> I'm a full stack developer and currently working with Laravel and Vue. Moreover , I am learning Node Js(Express) and Python(Django). I have experienced with creating UI/UX design , Front-end , Backend and etc...</p>
+                            <a href="noel-resume.pdf" download="noel-resume.pdf" class="btn btn-outline-info btn-theme wow fadeInDown">Download My Resume<span class="theme-color"><i class="feather-arrow-down-circle ps-2"></i></span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="container-fluid py-5 services" id="services">
+        <div class="row py-5">
+            <div class="container">
+                <div class="row pb-5">
+                    <div class="col-12 mb-4 text-center">
+                        <h3 class="text-white textborder wow fadeInDown">Services </h3>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 text-center shadow m-4  wow fadeInRight ani-delay1">
+                            <div class="text-center">
+                                <img src="img/undraw_mobile_prototyping_grmd.svg" class="my-3" style="width: 100px; height: 100px;" alt="">
+                            </div>
+                            <div class="card-body">
+
+                                <div class="card-text">
+                                    <div class="card-head-text">
+                                        <h5 class="mb-3 theme-color"> UI/UX Design</h5>
+                                    </div>
+                                    <p class="mb-3 text-white">
+                                        Just give me your favorite color , logo , desired design for your project. I will give you back a creative design with accent colors and mind-blowing design temlate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 text-center shadow m-4  wow fadeInRight ani-delay2">
+                            <div class="text-center">
+                                <img src="img/undraw_grid_design_obmd.svg" class="my-3" style="width: 100px; height: 100px;" alt="">
+
+                            </div>
+                            <div class="card-body">
+
+                                <div class="card-text">
+                                    <div class="card-head-text">
+                                        <h5 class="mb-3 theme-color">Front End</h5>
+                                    </div>
+                                    <p class="mb-3 text-white">
+                                        In Deep words , your website is the best place to implement your bussiness , brands , contact informations , sitemap , social midea links and CTA(Call to Action) for your bussiness marketing.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card border-0 text-center shadow m-4 wow fadeInRight ani-delay3">
+                            <div class="text-center">
+                                <img src="img/undraw_server_cluster_jwwq.svg" class="my-3" style="width: 100px; height: 100px;" alt="">
+                            </div>
+                            <div class="card-body">
+
+                                <div class="card-text">
+                                    <div class="card-head-text">
+                                        <h5 class="mb-3 theme-color">Back End</h5>
+                                    </div>
+                                    <p class="mb-3 text-white">
+                                        Server side refers to many things , the core application logic, databases, data and application integration, API and other back end processes. I'm now working its all with php(laravel) and MySQL.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid py-5 skills" id="skills">
+
+        <div class="row py-5">
+            <div class="container">
+                <div class="row px-4">
+
+                    <div class="col-12 text-center mb-5 mx-2">
+                        <h3 class="text-white textborder wow fadeInDown">My <span class="theme-color"> Skills</span></h3>
+                    </div>
+
+                    <div class="row d-flex justify-content-between align-items-center">
+
+                        <div class="col-12 col-md-5 mb-4 mx-2">
+                            <p class="text-white wow fadeInLeft"><img src="img/icons8-js-squared-32.png" class="skill-icon mx-2" />Js</p>
+                            <div class="progress wow fadeInLeft shadow-lg">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 93%"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-5 mb-4 mx-2">
+                            <p class="text-white wow fadeInLeft"><img src="img/icons8-php-logo-30.png" class="skill-icon mx-2" />PHP</p>
+                            <div class="progress wow fadeInLeft shadow-lg">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 87%"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-5 mb-4 mx-2">
+                            <p class="text-white wow fadeInLeft"><img src="img/icons8-node-js.svg" class="skill-icon mx-2" />Node Js</p>
+                            <div class="progress wow fadeInLeft shadow-lg">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-5 mb-4 mx-2">
+                            <p class="text-white"> <img src="img/icons8-laravel-50.png" class="skill-icon mx-2" />Laravel</p>
+                            <div class="progress wow fadeInLeft shadow-lg">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-5 mb-4 mx-2">
+                            <p class="text-white wow fadeInLeft"><img src="img/icons8-vue-js.svg" class="skill-icon mx-2" />Vue Js</p>
+                            <div class="progress wow fadeInLeft shadow-lg">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-5 mb-4 mx-2">
+                            <p class="text-white wow fadeInLeft"><img src="img/icons8-linux-48.png" class="skill-icon mx-2" />Linux</p>
+                            <div class="progress wow fadeInLeft shadow-lg">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 73%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="collapse" id="showmoreSkill">
+
+                            <div class="row d-flex justify-content-between align-items-center">
+
+                                <div class="col-12 col-md-5 mb-4 mx-2">
+                                    <p class="text-white wow fadeInLeft"><img src="img/icons8-github.svg" class="skill-icon mx-2" />Git</p>
+                                    <div class="progress wow fadeInLeft shadow-lg">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-5 mb-4 mx-2">
+                                    <p class="text-white wow fadeInLeft"><img src="img/icons8-python-48.png" class="skill-icon mx-2" />Python</p>
+                                    <div class="progress wow fadeInLeft shadow-lg">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-5 mb-4 mx-2">
+                                    <p class="text-white wow fadeInLeft"><img src="img/icons8-mysql-logo.svg" class="skill-icon mx-2" />MySQL</p>
+                                    <div class="progress wow fadeInLeft shadow-lg">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 78%"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 text-center showMoreBtn mt-3">
+                            <button onclick="showMoreClick()" class="btn btn-theme wow fadeInDown" style="border-radius: 1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#showmoreSkill" aria-expanded="false" aria-controls="showmoreSkill">
+                          <i class="feather-chevron-down theme-color pe-2"></i>  Show More
+                        </button>
+                        </div>
+                        <div class="col-12 showLessBtn text-center mt-3" style="display: none;">
+                            <button onclick="showMoreClick()" class="btn btn-theme wow fadeInDown" style="border-radius: 1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#showmoreSkill" aria-expanded="false" aria-controls="showmoreSkill">
+                            <i class="feather-chevron-up theme-color pe-2"></i>  Show less
+                        </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+    <section class="container-fluid py-5 my-projects" id="my-projects">
+        <div class="row py-5">
+            <div class="container">
+                <div class="row pb-5">
+                    <div class="col-12 mb-5 text-center">
+                        <h3 class="text-white textborder wow fadeInDown">My Recent Projects </h3>
+                    </div>
+
+                    <div class="splide pb-5" id="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <div class="card border-0 text-center shadow m-4">
+                                        <img class="card-img" src="img/project-imgs/applify.png" style="width: 100%; height: 170px;" alt="">
+                                        <div class="card-body">
+
+                                            <div class="card-text">
+                                                <div class="card-head-text">
+                                                    <h5 class="mb-3 theme-color">Applify Blog</h5>
+                                                </div>
+                                                <p class="mb-3 text-white">
+                                                    Laravel + Vue blog app with full-feature of role management and permission management.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <div class="card border-0 text-center shadow m-4">
+                                        <img class="card-img" src="img/project-imgs/magic_pay.png" style="width: 100%; height: 170px;" alt="">
+                                        <div class="card-body">
+
+                                            <div class="card-text">
+                                                <div class="card-head-text">
+                                                    <h5 class="mb-3 theme-color">Magic Pay</h5>
+                                                </div>
+                                                <p class="mb-3 text-white">
+                                                    Wallet application with laravel.REST API for Mobile developer and other many features.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <div class="card border-0 text-center shadow m-4">
+                                        <img class="card-img" src="img/project-imgs/paymentLog.png" style="width: 100%; height: 170px;" alt="">
+                                        <div class="card-body">
+
+                                            <div class="card-text">
+                                                <div class="card-head-text">
+                                                    <h5 class="mb-3 theme-color"> The Payment Log</h5>
+                                                </div>
+                                                <p class="mb-3 text-white">
+                                                    Income Expense Tracker Application.Feature tracking with Yearly ,Monthly and Daily.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <a href="https://ksl-burgerproject.netlify.app" target="blank">
+                                        <div class="card border-0 text-center shadow m-4">
+                                            <img class="card-img" src="img/project-imgs/burger.png" style="width: 100%; height: 170px;" alt="">
+                                            <div class="card-body">
+
+                                                <div class="card-text">
+                                                    <div class="card-head-text">
+                                                        <h5 class="mb-3 theme-color">Burger Shop</h5>
+                                                    </div>
+                                                    <p class="mb-3 text-white">
+                                                        UI/UX project with Html,Css,Js,Jquery,Bootstrap and other library.Final project from SWD.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </li>
+
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <div class="card border-0 text-center shadow m-4">
+                                        <img class="card-img" src="img/project-imgs/blog.png" style="width: 100%; height: 170px;" alt="">
+                                        <div class="card-body">
+
+                                            <div class="card-text">
+                                                <div class="card-head-text">
+                                                    <h5 class="mb-3 theme-color"> Blog APP PHP</h5>
+                                                </div>
+                                                <p class="mb-3 text-white">
+                                                    Blog app with Pure PHP and featured admin dashboard ,Ads ,user management ,roles and more..
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <a href="https://wayofcross.000webhostapp.com" target="blank">
+                                        <div class="card border-0 text-center shadow m-4">
+                                            <img class="card-img" src="img/project-imgs/wayofcross.png" style="width: 100%; height: 170px;" alt="">
+                                            <div class="card-body">
+
+                                                <div class="card-text">
+                                                    <div class="card-head-text">
+                                                        <h5 class="mb-3 theme-color">Way of Cross</h5>
+                                                    </div>
+                                                    <p class="mb-3 text-white">
+                                                        The way of cross app with unicode ,zawgyi and english.Created while practicing HTML,Css.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                </li>
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <div class="card border-0 text-center shadow m-4">
+                                        <img class="card-img" src="img/project-imgs/mmexchange.png" style="width: 100%; height: 170px;" alt="">
+                                        <div class="card-body">
+
+                                            <div class="card-text">
+                                                <div class="card-head-text">
+                                                    <h5 class="mb-3 theme-color">MM Exchange Calc</h5>
+                                                </div>
+                                                <p class="mb-3 text-white">
+                                                    Created with js and php .Real-time exchange data fetch form CBM.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <div class="card border-0 text-center shadow m-4">
+                                        <img class="card-img" src="img/project-imgs/url_short.png" style="width: 100%; height: 170px;" alt="">
+                                        <div class="card-body">
+
+                                            <div class="card-text">
+                                                <div class="card-head-text">
+                                                    <h5 class="mb-3 theme-color"> Url Shortener</h5>
+                                                </div>
+                                                <p class="mb-3 text-white">
+                                                    Url shortener app with laravel backend support both logged in users and gurest users.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+
+                                <li class="splide__slide wow fadeInRight ani-delay1">
+                                    <div class="card border-0 text-center shadow m-4">
+                                        <img class="card-img" src="img/project-imgs/dashboard.png" style="width: 100%; height: 170px;" alt="">
+                                        <div class="card-body">
+
+                                            <div class="card-text">
+                                                <div class="card-head-text">
+                                                    <h5 class="mb-3 theme-color"> Admin Dashboard</h5>
+                                                </div>
+                                                <p class="mb-3 text-white">
+                                                    Admin Dashboard UI project with Html,Css,Js,Jquery,Bootstrap ,ChartJS and other library
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid py-5 contact-me" id="contact-me">
+
+        <div class="row pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="text-white textborder wow fadeInDown">Contact <span class="theme-color"> Me</span></h3>
+                    </div>
+
+                    <div class="col-12 col-md-6 text-center mt-4 d-flex justify-content-center align-items-center">
+                        <img src="img/undraw_Social_notifications_re_xcbi.svg" class="wow slideInLeft" style="width: 250px; height: 250px;" alt="">
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-4 d-flex justify-content-center align-items-center">
+                        <div class="about-head-text py-5">
+                            <h3 class="text-white mb-3 wow fadeInDown">Let's Work Together</h3>
+                            <div class="social-icon py-3 d-flex justify-content-around align-items-center">
+                                <a target="blank" href="https://facebook.com/noel.ksl" class="wow fadeInRight ani-delay1"><i class="feather-facebook"></i></a>
+                                <a target="blank" href="https://twitter.com/Noelkhantsilwin" class="wow fadeInRight ani-delay2"><i class="feather-twitter"></i></a>
+                                <a target="blank" href="https://mm.linkedin.com/in/noel-khant-bb6818174" class="wow fadeInRight ani-delay3"><i class="feather-linkedin"></i></a>
+                                <a target="blank" href="https://github.com/khantsilwin" class="wow fadeInRight ani-delay4"><i class="feather-github"></i></a>
+                                <a target="blank" href="https://instagram.com/khant.si.lwin" class="wow fadeInRight ani-delay5"><i class="feather-instagram"></i></a>
+                            </div>
+                            <div class="contacts mt-3">
+                                <a href="tel:+959782035802">
+                                    <p class="text-white d-flex align-items-center wow fadeInDown ani-delay1"><i class="feather-phone theme-color me-3 "></i> +959782035802</p>
+                                </a>
+                                <a href="mailto:noelkhantsilwin@gmail.com">
+                                    <p class="text-white d-flex align-items-center wow fadeInDown ani-delay2"><i class="feather-message-square theme-color me-3 "></i> noelkhantsilwin@gmail.com</p>
+                                </a>
+                                <p class="text-white d-flex align-items-center wow fadeInDown ani-delay3"><i class="feather-map-pin theme-color me-3 "></i>Yangon , Myanmar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="container-fluid py-2" style="background-color: #360c7f; margin-top: -2px;">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-md-flex justify-content-between align-items-center">
+                            <p class="mb-0 text-white">&copy; CopyRight All Rights Reserved <span id="year"></span>.</p>
+                            <p class="mb-0 text-white">Designed by <span class="theme-color">Noel.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="js/typeit.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/vanilla-tilt.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
