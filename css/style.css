@@ -117,15 +117,15 @@
 
             @keyframes flashboxshadow{
                 0% {
-                    box-shadow: 0 0px 0px 0 rgba(12, 33, 226, 0.822), 0 0px 0px 0 rgba(0, 0, 0, 0.671);
+                    box-shadow: 0 -10px -10px 0 rgba(12, 33, 226, 0.822), 0 0px 0px 0 rgba(0, 0, 0, 0.671);
                 }
                 
                 50% {
-                    box-shadow: 0 4px 8px 0 rgba(12, 33, 226, 0.822), 0 6px 20px 0 rgba(0, 0, 0, 0.671);
+                    box-shadow: 0 6px 10px 0 rgba(12, 33, 226, 0.822), 0 6px 20px 0 rgba(0, 0, 0, 0.671);
                 }
 
                 100% {
-                    box-shadow: 0 0px 0px 0 rgba(12, 33, 226, 0.822), 0 0px 0px 0 rgba(0, 0, 0, 0.671);
+                    box-shadow: 0 -10px -10px 0 rgba(12, 33, 226, 0.822), 0 0px 0px 0 rgba(0, 0, 0, 0.671);
                 }
             }
          
