@@ -110,35 +110,22 @@
                 margin: 0 auto;
                 padding:5px;
             border: 2px solid var(--primary);
-             box-shadow: 0 4px 8px 0 rgba(12, 33, 226, 0.822), 0 6px 20px 0 rgba(0, 0, 0, 0.671);
+             /* box-shadow: 0 4px 8px 0 rgba(12, 33, 226, 0.822), 0 6px 20px 0 rgba(0, 0, 0, 0.671); */
+             animation: flashboxshadow 5s infinite;
             }
 
 
-         
-            @keyframes loader{
+            @keyframes flashboxshadow{
                 0% {
-                    transform: rotate(
-                0deg
-                );
+                    box-shadow: 0 0px 0px 0 rgba(12, 33, 226, 0.822), 0 0px 0px 0 rgba(0, 0, 0, 0.671);
                 }
                 
-                100% {
-                    transform: rotate(
-                1turn
-                );
+                50% {
+                    box-shadow: 0 4px 8px 0 rgba(12, 33, 226, 0.822), 0 6px 20px 0 rgba(0, 0, 0, 0.671);
                 }
-            }
-            @-webkit-keyframes loader{
-                0% {
-                    transform: rotate(
-                0deg
-                );
-                }
-                
+
                 100% {
-                    transform: rotate(
-                1turn
-                );
+                    box-shadow: 0 0px 0px 0 rgba(12, 33, 226, 0.822), 0 0px 0px 0 rgba(0, 0, 0, 0.671);
                 }
             }
          
