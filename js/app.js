@@ -53,7 +53,7 @@ new Splide('#splide', {
         lazyLoad: 'nearby',
         pauseOnHover: false,
         breakpoints: {
-            '640': {
+            '800': {
                 perPage: 2,
                 gap: '1rem',
             },
